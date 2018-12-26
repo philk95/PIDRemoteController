@@ -39,6 +39,13 @@ public class PCRemote {
 		return this.connection.getOutputStream();
 	}
 
+	public void sendCommand(String command) throws IOException {
+		OutputStream outputStream = getOutputStream();
+
+		outputStream.write(command.getBytes());
+		outputStream.flush();
+	}
+
 	private static void sendCommands(PCRemote remote) throws IOException {
 		OutputStream outputStream = remote.getOutputStream();
 

@@ -15,7 +15,7 @@ public class PIDControllerLauncher extends Application {
 		URL resource = getClass().getResource("PIDController.fxml");
 		Parent root = FXMLLoader.load(resource);
 
-		Scene scene = new Scene(root, 300, 300);
+		Scene scene = new Scene(root);
 
 		stage.setTitle("PID Remote Controller");
 		stage.setScene(scene);
